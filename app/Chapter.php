@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chapter extends Model
 {
-    //
+
+    public function Event(){
+        return $this->hasMany("App\Event", "idChapter");
+    }
 }
